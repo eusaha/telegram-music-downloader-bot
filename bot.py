@@ -1,6 +1,13 @@
 import os
 import youtube_dl
 import telepotpro
+import mysql.connector
+mysql=mysql.connector.connect(
+host="sql7.freesqldatabase.com",
+user="sql7531278",
+passwd="cThLtKnNZQ",
+database="sql7531278",
+)
 from random import randint
 from multiprocessing import Process
 from youtubesearchpython import VideosSearch
