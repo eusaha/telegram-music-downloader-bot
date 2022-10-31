@@ -18,6 +18,13 @@ if mysql.is_connected():
   print("connected mysq server..")
 mycursor = mysql.cursor()
 
+mycursor=mysql.cursor()
+sql="insert into test2(name,link) values(%s,%s)"
+val=("test","user_input")
+mycursor.execute(sql,val)
+
+mysql.commit();
+
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
