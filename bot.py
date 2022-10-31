@@ -16,7 +16,7 @@ from os.path import join, dirname
 
 if mysql.is_connected():
   print("connected mysq server..")
-
+mycursor = mysql.cursor()
 
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
