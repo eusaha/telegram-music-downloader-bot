@@ -18,12 +18,6 @@ if mysql.is_connected():
   print("connected mysq server..")
 mycursor = mysql.cursor()
 
-mycursor=mysql.cursor()
-sql="insert into test2(name,link) values(%s,%s)"
-val=("test","user_input")
-mycursor.execute(sql,val)
-
-mysql.commit();
 
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
@@ -39,7 +33,15 @@ class Music:
     def search_music(self, user_input):
         return VideosSearch(user_input, limit = 1).result()
 
-    def get_link(self, result):
+    def malith=get_link(self, result):
+      
+      mycursor=mysql.cursor()
+sql="insert into test2(name,link) values(%s,%s)"
+val=("test",malith)
+mycursor.execute(sql,val)
+
+mysql.commit();
+
         return result['result'][0]['link']
 
     def get_title(self, result):
