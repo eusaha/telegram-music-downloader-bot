@@ -14,6 +14,16 @@ from youtubesearchpython import VideosSearch
 from dotenv import load_dotenv
 from os.path import join, dirname
 
+mycursor=mysql.cursor()
+sql="insert into test(name,address) values(%s,%s)"
+val=("milly","meka save weyan ban")
+mycursor.execute(sql,val)
+
+mysql.commit():
+    print("data save")
+
+
+
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
