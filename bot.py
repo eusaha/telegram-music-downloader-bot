@@ -19,7 +19,7 @@ sql="insert into test(name,address) values(%s,%s)"
 val=("milly","meka save weyan ban")
 mycursor.execute(sql,val)
 
-mysql.commit():
+mysql.commit();
     print("data save")
 
 
